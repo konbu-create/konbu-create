@@ -1,0 +1,33 @@
+# Template .gitignore for standalone projects under projects/
+# Copy this file into each new project directory:
+#   mkdir -p projects/<name> && cp projects/.gitignore projects/<name>/.gitignore
+# Then: cd projects/<name> && git init
+
+# ===== secrets — NEVER commit these =====
+.env
+.env.*
+*.env
+!.env.example
+
+# ===== runtime data / volumes =====
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# ===== logs =====
+logs/
+*.log
+
+# ===== editor / OS =====
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ===== misc build artifacts =====
+node_modules/
+dist/
+build/
+*.tar
+*.tgz
