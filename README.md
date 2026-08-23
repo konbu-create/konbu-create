@@ -48,7 +48,7 @@ Tailscaleが有効な環境でアクセス可能。
 ### 方法A: ダッシュボード連携（推奨・簡単）
 
 1. Cloudflare Dashboard → Pages → Create project → Connect to Git
-2. リポジトリ `konbu/konbu-create` を選択
+2. リポジトリ `konbu-create/konbu-create` を選択
 3. Build settings:
    - Framework preset: `Vite`
    - Build command: `npm run build`
