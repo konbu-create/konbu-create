@@ -9,7 +9,7 @@
     "build:gh": "VITE_SITE_URL=https://konbu-create.github.io/konbu-create/ VITE_BASE=/konbu-create/ vite build",
     "preview": "vite preview",
     "deploy": "npm run build:gh && gh-pages -d dist",
-    "deploy:preview": "npm run build:gh && gh-pages -d dist --dry-run"
+    "deploy:check": "npm run build:gh && echo 'build ok — run npm run deploy to publish'"
   },
   "devDependencies": {
     "@types/node": "^26.2.0",

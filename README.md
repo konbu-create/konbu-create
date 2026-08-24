@@ -50,9 +50,9 @@ Tailscaleが有効な環境でアクセス可能。
 
 ```bash
 # 初回: gh-pagesパッケージはインストール済み
-npm run deploy          # = npm run build:gh && gh-pages -d dist
-# 確認のみ
-npm run deploy:preview  # --dry-run
+npm run deploy        # = npm run build:gh && gh-pages -d dist
+# ビルド確認のみ（pushしない）
+npm run deploy:check
 ```
 
 `npm run deploy` は:
