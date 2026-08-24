@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>昆布クリエイト | Konbu Create — well-being × 技術 × 遊び</title>
+  <meta name="description" content="兵庫県川西市拠点の個人クリエイト集団・昆布クリエイト。well-being推進を主務に、AI・自律エージェント・ゲーム開発で「面白い」を形にする。代表 konbu。" />
+  <meta name="keywords" content="昆布クリエイト,Konbu Create,川西市,well-being,AI開発,Vibe Coding,自律エージェント,ゲーム開発,着膨れ勇者,ホムンクルス" />
+  <meta name="author" content="Konbu Create" />
+  <link rel="canonical" href="https://konbu-create.github.io/konbu-create/" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://konbu-create.github.io/konbu-create/" />
+  <meta property="og:title" content="昆布クリエイト | Konbu Create" />
+  <meta property="og:description" content="well-being × 技術 × 遊び — 兵庫県川西市発、AIと遊び心で未来をつくるクリエイト集団。" />
+  <meta property="og:image" content="https://konbu-create.github.io/konbu-create/ogp.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="昆布クリエイト — well-being × 技術 × 遊び" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="Konbu Create" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="昆布クリエイト | Konbu Create" />
+  <meta name="twitter:description" content="well-being × 技術 × 遊び — AIと遊び心で未来をつくる。" />
+  <meta name="twitter:image" content="https://konbu-create.github.io/konbu-create/ogp.png" />
+  <meta name="twitter:image:alt" content="昆布クリエイト — well-being × 技術 × 遊び" />
+
+  <!-- SEO -->
+  <meta name="theme-color" content="#0f1f1a" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="/konbu-create/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="/konbu-create/favicon.svg" />
+  <link rel="apple-touch-icon" href="/konbu-create/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "昆布クリエイト",
+    "alternateName": "Konbu Create",
+    "url": "https://konbu-create.github.io/konbu-create/",
+    "logo": "https://konbu-create.github.io/konbu-create/icon.png",
+    "image": "https://konbu-create.github.io/konbu-create/ogp.png",
+    "description": "個人クリエイト集団。well-being × 技術 × 遊び — AIと遊び心で未来をつくる。",
+    "foundingLocation": {"@type": "Place", "name": "兵庫県, 日本"},
+    "founder": {"@type": "Person", "name": "konbu", "url": "https://github.com/konbu-create", "sameAs": ["https://github.com/konbu-create"]},
+    "sameAs": ["https://github.com/konbu-create", "https://kibure-yusha.pages.dev/"],
+    "email": "make.konbu.master@gmail.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Works — Konbu Create",
+    "itemListElement": [
+      {
+        "@type": "CreativeWork",
+        "position": 1,
+        "name": "着膨れ勇者 — Kibure Yusha",
+        "description": "着れば着るほど強くなるハイパーカジュアル×ローグライト×ビルド。Vite + TypeScript + PWA + Capacitor。",
+        "url": "https://kibure-yusha.pages.dev/"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 2,
+        "name": "ホムンクルス — Homunculus",
+        "description": "Discord越しに自律開発するハーネス。hermes + opencode + SearXNG + systemd + DDD。"
+      }
+    ]
+  }
+  </script>
+  <script type="module" crossorigin src="/konbu-create/assets/index-SdlvXk0V.js"></script>
+  <link rel="stylesheet" crossorigin href="/konbu-create/assets/index-mzl20QzZ.css">
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#" aria-label="昆布クリエイト トップ">
+        <span class="logo-mark" aria-hidden="true">
+          <img src="/konbu-create/icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:50%;object-fit:cover;display:block" />
+        </span>
+        <span class="logo-text">
+          <span class="logo-text__ja">昆布クリエイト</span>
+          <span class="logo-text__en">KONBU CREATE</span>
+        </span>
+      </a>
+      <nav class="header__nav" aria-label="メインナビゲーション">
+        <a href="#about">About</a>
+        <a href="#tech">Tech</a>
+        <a href="#works">Works</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="header__burger" id="burger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション">
+      <a href="#about">About</a>
+      <a href="#tech">Tech Stack</a>
+      <a href="#works">Works</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__wave"></div>
+    </div>
+    <div class="hero__inner">
+      <div class="hero__label reveal">
+        <span class="hero__dot"></span>
+        HYOGO — SINCE 2024
+        <span class="hero__label-ja">兵庫発</span>
+      </div>
+      <h1 class="hero__title reveal" style="--delay:0.08s">
+        <span class="hero__title-ja">昆布クリエイト</span>
+        <span class="hero__title-en">Konbu Create</span>
+      </h1>
+      <p class="hero__tagline reveal" style="--delay:0.16s">
+        well-being<span class="dot">·</span>技術<span class="dot">·</span>遊び
+        <span class="hero__tagline-en">well-being × technology × play</span>
+      </p>
+      <p class="hero__desc reveal" style="--delay:0.24s">
+        人の健やかさから、面白い未来をつくる。<br>
+        AIと自律エージェント、ゲームの遊び心を束ねて<br class="sp-only">
+        “作って試して届ける”を高速で回す、小さなクリエイト集団です。
+      </p>
+      <div class="hero__actions reveal" style="--delay:0.32s">
+        <a href="#works" class="btn btn--primary">作品を見る <span aria-hidden="true">→</span></a>
+        <a href="https://github.com/konbu-create" target="_blank" rel="noopener" class="btn btn--ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.43a9.3 9.3 0 0 1 2.5.34c1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.58.69.48A10.33 10.33 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="hero__stats reveal" style="--delay:0.4s">
+        <div class="stat">
+          <span class="stat__num" data-count="2">2</span><span class="stat__unit">works</span>
+          <span class="stat__label">公開プロダクト</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">PWA</span>
+          <span class="stat__label">オフライン対応</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">AI</span><span class="stat__unit">× Agent</span>
+          <span class="stat__label">自律開発</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">&lt;1s</span>
+          <span class="stat__label">Vite HMR</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="下へスクロール">
+      <span>Scroll</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-head__num">01</span>
+        <div>
+          <h2 class="section-head__title">About <span>— 昆布クリエイトとは</span></h2>
+          <p class="section-head__sub">well-beingを起点に、技術と遊びで価値を届ける</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main reveal">
+          <p class="about-main__lead">
+            <strong>個人クリエイト集団</strong>。<br>
+            リーダー <strong>konbu</strong>（28歳）が主務とする well-being 推進の知見と、<br>
+            趣味で磨いたゲーム開発・AI開発の技術を掛け合わせ、<br>
+            <em>「人の役に立ちつつ、面白い」</em>ものづくりを追求しています。
+          </p>
+          <div class="about-leader">
+            <img class="about-leader__avatar" src="/konbu-create/icon-circle.png" alt="konbu アイコン" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid rgba(255,255,255,0.12)" />
+            <div>
+              <div class="about-leader__name">konbu <span>/ Leader</span></div>
+              <div class="about-leader__meta">well-being推進 / AI &amp; Game Dev / <a href="https://github.com/konbu-create" target="_blank" rel="noopener">github.com/konbu-create</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-pillars">
+          <article class="pillar reveal" style="--delay:0.08s">
+            <div class="pillar__icon" aria-hidden="true">◉</div>
+            <h3>well-being</h3>
+            <p>人の健やかさ・つながり・自己実現を支える視点。テクノロジーは目的ではなく、well-beingを高める手段として捉えます。</p>
+            <span class="pillar__en">Human flourishing first</span>
+          </article>
+          <article class="pillar reveal" style="--delay:0.14s">
+            <div class="pillar__icon" aria-hidden="true">⬢</div>
+            <h3>技術</h3>
+            <p>AI・自律エージェント・Web/PWA。枯れた技術を選び、確実に動くものを速く届ける。新しい挑戦は小さく試す。</p>
+            <span class="pillar__en">Boring tech, shipped fast</span>
+          </article>
+          <article class="pillar reveal" style="--delay:0.2s">
+            <div class="pillar__icon" aria-hidden="true">✦</div>
+            <h3>遊び</h3>
+            <p>ゲームに宿る「もう一度やりたい」をすべてのプロダクトに。遊び心が、継続と愛着を生むと信じています。</p>
+            <span class="pillar__en">Play is a feature</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="section section--alt" id="tech">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-head__num">02</span>
+        <div>
+          <h2 class="section-head__title">Tech Stack <span>— 得意領域</span></h2>
+          <p class="section-head__sub">枯れた技術を核に、必要なところだけ尖る</p>
+        </div>
+      </div>
+
+      <div class="tech-grid">
+        <article class="tech-card reveal">
+          <div class="tech-card__head">
+            <span class="tech-card__icon">◈</span>
+            <h3>AI / LLM</h3>
+            <span class="tech-card__badge">Core</span>
+          </div>
+          <p>LLM活用・プロンプト設計・自律エージェント連携。探索から実装まで一気通貫。</p>
+          <div class="tech-card__tags"><span>LLM</span><span>RAG</span><span>Agent</span></div>
+        </article>
+        <article class="tech-card reveal" style="--delay:0.06s">
+          <div class="tech-card__head">
+            <span class="tech-card__icon">⬡</span>
+            <h3>Vibe Coding</h3>
+            <span class="tech-card__badge">Core</span>
+          </div>
+          <p>対話的に意図を伝え、AIと共にコードを編む。発想から形になるまでの距離を最小化。</p>
+          <div class="tech-card__tags"><span>opencode</span><span>hermes</span><span>DDD</span></div>
+        </article>
+        <article class="tech-card reveal" style="--delay:0.12s">
+          <div class="tech-card__head">
+            <span class="tech-card__icon">⬢</span>
+            <h3>自律エージェント</h3>
+          </div>
+          <p>Discord越しに自律開発するハーネス Homunculus。設計〜実装〜検証を回す制御プレーン。</p>
+          <div class="tech-card__tags"><span>Discord</span><span>systemd</span><span>SearXNG</span></div>
+        </article>
+        <article class="tech-card reveal" style="--delay:0.08s">
+          <div class="tech-card__head">
+            <span class="tech-card__icon">▣</span>
+            <h3>Web / PWA</h3>
+          </div>
+          <p>軽量・高速・オフライン対応。Vite + TypeScript を基盤に、余計な抽象を避ける。</p>
+          <div class="tech-card__tags"><span>Vite</span><span>TypeScript</span><span>PWA</span></div>
+        </article>
+        <article class="tech-card reveal" style="--delay:0.14s">
+          <div class="tech-card__head">
+            <span class="tech-card__icon">▭</span>
+            <h3>Capacitor</h3>
+          </div>
+          <p>Web資産をそのままネイティブへ。AdMob 連携まで含めたモバイル展開。</p>
+          <div class="tech-card__tags"><span>Capacitor</span><span>AdMob</span><span>iOS/Android</span></div>
+        </article>
+        <article class="tech-card reveal" style="--delay:0.2s">
+          <div class="tech-card__head">
+            <span class="tech-card__icon">✦</span>
+            <h3>Game Dev</h3>
+          </div>
+          <p>ハイパーカジュアル×ローグライト×ビルド。数値バランスをシミュレーションで詰める。</p>
+          <div class="tech-card__tags"><span>Balance Sim</span><span>Canvas</span><span>Game Design</span></div>
+        </article>
+      </div>
+
+      <!-- Architecture mini-diagram -->
+      <div class="arch reveal">
+        <div class="arch__label">ARCHITECTURE — How we build</div>
+        <div class="arch__diagram" role="img" aria-label="アーキテクチャ図: DDDレイヤーとハーネス構成">
+          <div class="arch__layer arch__layer--domain">
+            <span class="arch__layer-title">Domain</span>
+            <span>well-being / 遊び / ことば</span>
+          </div>
+          <div class="arch__arrow">↓</div>
+          <div class="arch__layer arch__layer--app">
+            <span class="arch__layer-title">Application</span>
+            <span>hermes <em>(要件)</em> → opencode <em>(設計・実装)</em></span>
+          </div>
+          <div class="arch__arrow">↓</div>
+          <div class="arch__layer arch__layer--infra">
+            <span class="arch__layer-title">Infra</span>
+            <span>Vite / TS / PWA / Capacitor / SearXNG / systemd / Discord</span>
+          </div>
+        </div>
+        <div class="arch__harness">
+          <span class="arch__harness-title">Harness — Homunculus</span>
+          <code>Discord → hermes → opencode → git → systemd → SearXNG</code>
+          <span class="arch__harness-note">制御プレーン全体を1つのソフトウェアとして扱う</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-head__num">03</span>
+        <div>
+          <h2 class="section-head__title">Works <span>— つくったもの</span></h2>
+          <p class="section-head__sub">遊びと技術が交わるプロダクト</p>
+        </div>
+      </div>
+
+      <div class="works">
+        <!-- Kibure Yusha -->
+        <article class="work reveal">
+          <div class="work__visual work__visual--kibure" aria-hidden="true">
+            <div class="work__visual-inner">
+              <span class="work__visual-emoji">🧥⚔️</span>
+              <span class="work__visual-title">着膨れ勇者</span>
+              <span class="work__visual-sub">KIBURE YUSHA</span>
+              <div class="work__visual-tags"><span>Hyper-Casual</span><span>Roguelite</span><span>Build</span></div>
+            </div>
+            <div class="work__visual-glow"></div>
+          </div>
+          <div class="work__body">
+            <div class="work__meta">
+              <span class="work__num">01</span>
+              <span class="work__badge">Released</span>
+              <span class="work__year">2025 —</span>
+            </div>
+            <h3 class="work__title">着膨れ勇者 <span>Kibure Yusha</span></h3>
+            <p class="work__desc">着れば着るほど強くなる、ハイパーカジュアル×ローグライト×ビルド。装備を重ねて自分だけの勇者を膨らませ、押し寄せる敵を薙ぎ払う。1プレイ数分の手軽さと、ビルドを詰める奥深さを両立。</p>
+            <ul class="work__spec">
+              <li><span>Vite + TypeScript + PWA</span> — 瞬時起動・オフライン可</li>
+              <li><span>Capacitor + AdMob</span> — Webからネイティブへ</li>
+              <li><span>Balance Simulation</span> — 数千回シミュレーションで調整</li>
+            </ul>
+            <div class="work__links">
+              <a href="https://kibure-yusha.pages.dev/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">プレイする →</a>
+            </div>
+            <div class="work__stats">
+              <span><strong>PWA</strong> 対応</span>
+              <span><strong>&lt;1s</strong> 起動</span>
+              <span><strong>Offline</strong> 可</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Homunculus -->
+        <article class="work work--reverse reveal" style="--delay:0.08s">
+          <div class="work__visual work__visual--homunculus" aria-hidden="true">
+            <div class="work__visual-inner">
+              <span class="work__visual-emoji">🧪🤖</span>
+              <span class="work__visual-title">ホムンクルス</span>
+              <span class="work__visual-sub">HOMUNCULUS</span>
+              <div class="work__visual-tags"><span>Discord</span><span>Agent</span><span>DDD</span></div>
+            </div>
+            <div class="work__visual-glow work__visual-glow--alt"></div>
+          </div>
+          <div class="work__body">
+            <div class="work__meta">
+              <span class="work__num">02</span>
+              <span class="work__badge work__badge--alt">Harness</span>
+              <span class="work__year">2024 —</span>
+            </div>
+            <h3 class="work__title">ホムンクルス <span>Homunculus</span></h3>
+            <p class="work__desc">Discord越しに自律開発するハーネス。hermes（要件整理・調整）と opencode（設計〜実装）が協働し、SearXNG・systemd・git を束ねて“制御プレーン全体を1つのソフトウェア”として運用する。</p>
+            <ul class="work__spec">
+              <li><span>hermes + opencode</span> — 要件と実装の分離</li>
+              <li><span>DDD × WF</span> — 構造と時間の二軸設計</li>
+              <li><span>SearXNG / systemd</span> — ローカル完結の自律基盤</li>
+            </ul>
+            <div class="work__stats">
+              <span><strong>24h</strong> 稼働</span>
+              <span><strong>DDD</strong> 設計</span>
+              <span><strong>Local-first</strong></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section section--alt" id="philosophy">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-head__num">04</span>
+        <div>
+          <h2 class="section-head__title">Philosophy <span>— 作り方</span></h2>
+          <p class="section-head__sub">速く、確実に、面白く</p>
+        </div>
+      </div>
+
+      <div class="phil-grid">
+        <article class="phil-card reveal">
+          <span class="phil-card__num">01</span>
+          <h3>枯れた技術を優先</h3>
+          <p class="phil-card__en">Boring technology</p>
+          <p>新しいものより、枯れて動くものを選ぶ。Vite + TypeScript + 素のHTML/CSS/DOM。依存は最小限に、置き換え可能な構成で長く持つ。</p>
+          <div class="phil-card__quote">「派手さより、確実に届くことを。」</div>
+        </article>
+        <article class="phil-card reveal" style="--delay:0.08s">
+          <span class="phil-card__num">02</span>
+          <h3>バイブコーディング</h3>
+          <p class="phil-card__en">Vibe coding</p>
+          <p>意図と感覚を対話で伝え、AIと共にコードを編む。厳密な仕様書より、速い往復で“らしさ”を掴む。作りながら考える。</p>
+          <div class="phil-card__quote">「言葉にして、すぐ形に。」</div>
+        </article>
+        <article class="phil-card reveal" style="--delay:0.16s">
+          <span class="phil-card__num">03</span>
+          <h3>高速検証</h3>
+          <p class="phil-card__en">Ship fast, learn faster</p>
+          <p>小さく作ってすぐ試す。シミュレーションで数値を詰め、PWAで即配布、フィードバックで磨く。完璧より前進。</p>
+          <div class="phil-card__quote">「まず動くものを、明日に。」</div>
+        </article>
+      </div>
+
+      <div class="phil-metrics reveal">
+        <div class="phil-metric">
+          <span class="phil-metric__value">&lt; 1s</span>
+          <span class="phil-metric__label">Vite HMR</span>
+        </div>
+        <div class="phil-metric">
+          <span class="phil-metric__value">PWA</span>
+          <span class="phil-metric__label">オフライン動作</span>
+        </div>
+        <div class="phil-metric">
+          <span class="phil-metric__value">Agent</span>
+          <span class="phil-metric__label">自律開発</span>
+        </div>
+        <div class="phil-metric">
+          <span class="phil-metric__value">DDD</span>
+          <span class="phil-metric__label">設計原則</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-head__num">05</span>
+        <div>
+          <h2 class="section-head__title">Contact <span>— 話しましょう</span></h2>
+          <p class="section-head__sub">お仕事の相談・コラボ・雑談まで</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-main reveal">
+          <p class="contact-main__lead">
+            一緒に面白いものを作りませんか？<br>
+            well-being、AI活用、ゲーム開発—<br>
+            どんな小さなアイデアでも歓迎です。
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/konbu-create" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.43a9.3 9.3 0 0 1 2.5.34c1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.58.69.48A10.33 10.33 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+              </span>
+              <span>
+                <strong>GitHub</strong>
+                <em>github.com/konbu-create</em>
+              </span>
+              <span class="contact-link__arrow">↗</span>
+            </a>
+            <a href="mailto:make.konbu.master@gmail.com" class="contact-link">
+              <span class="contact-link__icon" aria-hidden="true">✉</span>
+              <span>
+                <strong>Email</strong>
+                <em>make.konbu.master@gmail.com</em>
+              </span>
+              <span class="contact-link__arrow">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card reveal" style="--delay:0.1s">
+          <div class="contact-card__head">
+            <span class="contact-card__dot"></span>
+            Contact
+          </div>
+          <p>リモートでのコラボも歓迎しています。<br>お気軽にご連絡ください。</p>
+          <div class="contact-card__meta">
+            <span>Response: 1–2 days</span>
+            <span>Lang: 日本語 / English</span>
+          </div>
+          <a href="mailto:make.konbu.master@gmail.com" class="btn btn--primary btn--full">メールで連絡する</a>
+          <span class="contact-card__note">mailtoリンクでメーラーが開きます</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">昆布クリエイト</span>
+          <span class="footer__en">Konbu Create</span>
+        </div>
+        <div class="footer__copy">
+          <span>© 2026 Konbu Create. Crafted with well-being × tech × play.</span>
+          <span class="footer__sub">Built with Vite + TypeScript — boring tech, shipped fast.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
