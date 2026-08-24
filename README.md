@@ -4,7 +4,7 @@
 
 > well-being × 技術 × 遊び — AIと遊び心で未来をつくる
 
-公開URL: `https://konbu-create.pages.dev/` (Cloudflare Pages)
+公開URL: `https://konbu-create.github.io/konbu-create/` (GitHub Pages, public repo)
 
 ## Stack
 
@@ -22,7 +22,8 @@ npm run dev      # http://localhost:5174
 ## ビルド
 
 ```bash
-npm run build    # dist/ に出力
+npm run build              # dist/ に出力 (Cloudflare/ローカル用, base /)
+npm run build:gh           # GitHub Pages用 (base /konbu-create/ + canonical書き換え)
 npm run preview -- --host 0.0.0.0 --port 5174
 ```
 
@@ -43,40 +44,24 @@ http://konbu.border-saury.ts.net:5174
 
 Tailscaleが有効な環境でアクセス可能。
 
-## デプロイ (Cloudflare Pages)
+## デプロイ (GitHub Pages — ローカルビルド)
 
-### 方法A: ダッシュボード連携（推奨・簡単）
-
-1. Cloudflare Dashboard → Pages → Create project → Connect to Git
-2. リポジトリ `konbu-create/konbu-create` を選択
-3. Build settings:
-   - Framework preset: `Vite`
-   - Build command: `npm run build`
-   - Output directory: `dist`
-   - Node version: `20`
-4. Save → 初回デプロイで `https://konbu-create.pages.dev/` が発行される
-
-### 方法B: GitHub Actions + Wrangler（自動デプロイ）
-
-`.github/workflows/deploy.yml` が `main` pushで `wrangler pages deploy dist` を実行:
-
-必要Secrets (GitHub → Settings → Secrets and variables → Actions):
-- `CLOUDFLARE_API_TOKEN` — Cloudflare Dashboard → My Profile → API Tokens → Create Token → Edit Cloudflare Workers (or Pages) テンプレート
-- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare Dashboard 右側 Account ID
-
-初回のみ手動でPagesプロジェクトを作成しておく:
-```bash
-npx wrangler pages project create konbu-create --production-branch=main
-```
-
-以降 `git push origin main` で自動デプロイ。
-
-### ローカルから手動デプロイ
+> GitHub Actionsでのビルドは行わず、ローカルでビルドして `gh-pages` ブランチにpushする方式（Actionsのビルドコスト節約）
 
 ```bash
-npm run build
-npx wrangler pages deploy dist --project-name=konbu-create
+# 初回: gh-pagesパッケージはインストール済み
+npm run deploy          # = npm run build:gh && gh-pages -d dist
+# 確認のみ
+npm run deploy:preview  # --dry-run
 ```
+
+`npm run deploy` は:
+1. `VITE_SITE_URL=https://konbu-create.github.io/konbu-create/ VITE_BASE=/konbu-create/ vite build` で `dist/` を生成（canonical/OGPがGitHub Pages URLに書き換わる）
+2. `gh-pages -d dist` で `gh-pages` ブランチにpush → GitHub Pagesが自動公開
+
+GitHub側の設定は済み: `Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: gh-pages / (root)` で `https://konbu-create.github.io/konbu-create/` が公開中。
+
+※ Cloudflare Pages (`https://konbu-create.pages.dev/`) は手動 `wrangler pages deploy` でも上げられるが、現在はGitHub Pages一本で運用。
 
 ## セクション構成
 
@@ -102,8 +87,8 @@ public/
   favicon.svg
   robots.txt
   sitemap.xml
-vite.config.ts
-.github/workflows/deploy.yml  # Cloudflare Pages デプロイ
+vite.config.ts           # VITE_SITE_URL/VITE_BASE対応
+package.json             # deployスクリプト (gh-pages)
 ```
 
 ## ライセンス
